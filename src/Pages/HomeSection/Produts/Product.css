@@ -1,3 +1,17 @@
-.product-img:hover{
-    transform: scaleX(-1);
+/* .product-card:hover .product-body{
+    position: absolute;
+    display: block;
 }
+
+.product-card{
+    position: relative;
+}
+
+
+.product-card:hover .product-img{
+    display: none;
+}
+
+.product-body{
+    display: none;
+} */

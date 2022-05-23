@@ -3,6 +3,8 @@ import './Home.css'
 import SecondBanner from '../SecondBanner/SecondBanner';
 import TopBanner from '../TopBanner/TopBanner';
 import Products from '../Products/Products';
+import ThirdBanner from '../ThirdBanner/ThirdBanner';
+import FourthBanner from '../FourthBanner/FourthBanner';
 
 
 const Home = () => {
@@ -11,6 +13,8 @@ const Home = () => {
             <TopBanner/>
             <SecondBanner/>
             <Products/>
+            <ThirdBanner/>
+            <FourthBanner/>
         </div>
     );
 };
