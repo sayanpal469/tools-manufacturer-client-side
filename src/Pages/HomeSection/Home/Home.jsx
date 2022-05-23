@@ -10,7 +10,6 @@ const Home = () => {
         <div className='mb-80 home'>
             <TopBanner/>
             <SecondBanner/>
-            {/* <ThirdBanner/> */}
             <Products/>
         </div>
     );

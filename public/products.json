@@ -1,58 +1,58 @@
 [
     {
       "id": "1",
-      "name": "Environmental Portraits",
+      "name": "Advance Tool",
       "balance": "$3,812.79",
-      "picture": "https://i.ibb.co/xX2hTGW/pexels-si-nan-nder-243128.jpg",
+      "picture": "https://i.ibb.co/qxPS8MP/advance-tool.jpg",
       "description": "An environmental portrait is a portrait executed in the subject's usual environment, such as in their home or workplace, and typically illuminates the subject's life and surroundings. The term is most frequently used of a genre of photography."
     },
     {
       "id": "2",
-      "name": "Full-body Portraits",
+      "name": "Chain Shaw",
       "balance": "$1,894.36",
-      "picture": "https://i.ibb.co/9nYXJ1t/pexels-craige-mcgonigle-3732891.jpg",
+      "picture": "https://i.ibb.co/zxbdX9m/chain-saw.jpg",
       "description": "Full body portraits involve a lot more work than when you are photographing just the head and the shoulders. Why? Because when you incorporate the full body in your imagery, you have to focus on posing your model, choosing the right lens, the right camera angle, use more light and spend more time setting things up."
     },
     {
       "id": "3",
-      "name": "Frame-filling Portraits",
+      "name": "Electrik Drill",
       "balance": "$2,707.57",
-      "picture": "https://i.ibb.co/jksXmLg/pexels-daniel-ap-1454825.jpg",
+      "picture": "https://i.ibb.co/FmnLFx9/electric-drill.jpg",
       "description": "To fill the frame means making your subject a large proportion of your image. This means you need to get close to your subject. Really close. Photographers often leave too much space around their subjects."
     },
     {
       "id": "4",
-      "name": "Gesture",
+      "name": "Electrick Wires",
       "balance": "$3,513.74",
-      "picture": "https://i.ibb.co/JtCbydN/pexels-pelageia-zelenina-7982400.jpg",
+      "picture": "https://i.ibb.co/921mvck/electric-wires.jpg",
       "description": "To share a photograph with those who somehow follow the photographs you take is a gesture, not quite unlike, say, sharing a bag of candy with people around you."
     },
     {
       "id": "5",
-      "name": "Capture Behavior",
+      "name": "Grinder",
       "balance": "$2,223.33",
-      "picture": "https://i.ibb.co/LQ9bbNj/pexels-antony-trivet-6748514.jpg",
+      "picture": "https://i.ibb.co/YRHcSv0/grinder.jpg",
       "description": "To photograph a wild animal, you must really be in love with it. There is quite a lot of reading material and videos you can watch to learn about why an animal behaves in a particular way, and when it is likely to do so. One of the best sources is BBC’s Planet Earth, narrated by the legendary David Attenborough."
     },
     {
       "id": "6",
-      "name": "Underwater Photography",
+      "name": "Hammer",
       "balance": "$3,666.19",
-      "picture": "https://i.ibb.co/xF7HvWF/pexels-matt-botha-4777691-1.jpg",
+      "picture": "https://i.ibb.co/Wsy56rb/hammer.jpg",
       "description": "Underwater Target Shooting is an underwater sport/shooting sport that tests a competitors' ability to accurately use a speargun via a set of individual and team events conducted in a swimming pool using freediving or Apnoea technique."
     },
     {
       "id": "7",
-      "name": "Night Protrait",
+      "name": "Pallet",
       "balance": "$3,666.19",
-      "picture": "https://i.ibb.co/7NfQnsC/pexels-vincent-ma-janssen-2302802.jpg",
+      "picture": "https://i.ibb.co/QMYgL7G/pallet.jpg",
       "description": "Although it sounds similar to Night Scene mode, Night Portrait mode is a different animal altogether. It's designed for capturing evenly exposed shots of a person standing in front of a nighttime background. Executed well, a night portrait will let viewers see detail in both the person and the dark background"
     },
     {
       "id": "8",
-      "name": "Birds",
+      "name": "Power Saw",
       "balance": "$3,666.19",
-      "picture": "https://i.ibb.co/1dGSCQG/pexels-tim-mossholder-1618424.jpg",
+      "picture": "https://i.ibb.co/9VnsYRZ/power-saw.jpg",
       "description": "Bird photography is, in part, about getting the textual details. This is where most photographers say, “Reach is almost everything in bird photography.” It is true to a certain extent. But there is a difference between you getting close to your subject and getting a similar frame using a large focal length."
     }
   ]
