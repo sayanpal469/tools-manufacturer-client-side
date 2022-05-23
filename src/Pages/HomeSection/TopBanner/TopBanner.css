@@ -1,0 +1,5 @@
+.top-banner{
+    background-image: url('../../../assets/banner/h9-parallax-1.jpg');
+    height: 80vh;
+    background-size: cover;
+}
