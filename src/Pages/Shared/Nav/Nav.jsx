@@ -8,7 +8,7 @@ const Nav = () => {
     <li><Link className='font-bold' to='/about'>Blogs</Link></li>
     <li><Link className='font-bold' to='/appointment'>Dashboard</Link></li>
     <li><Link className='font-bold' to='/reviews'>Portfolio</Link></li>
-    <li><Link className='font-bold' to='/contact'>Login</Link></li>
+    <li><Link className='font-bold' to='/login'>Login</Link></li>
     </>
     return (
         <div className='sticky top-0 z-50'>

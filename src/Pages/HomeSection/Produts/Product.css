@@ -14,4 +14,24 @@
 
 .product-body{
     display: none;
+}
+
+@media screen  and (max-width: 746px) {
+    .product-card:hover .product-body{
+        position: absolute;
+        display: block;
+    }
+    
+    .product-card{
+        position: relative;
+    }
+    
+    
+    .product-card:hover .product-img{
+        display: none;
+    }
+    
+    .product-body{
+        display: none;
+    }   
 } */
