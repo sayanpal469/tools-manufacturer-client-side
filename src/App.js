@@ -7,6 +7,8 @@ import Purchase from './Pages/HomeSection/Purchase/Purchase';
 import NotFound from './Pages/Shared/NotFound/NotFound';
 import SignUp from './Pages/Shared/LoginArea/SignUp/SignUp';
 import Login from './Pages/Shared/LoginArea/Login/Login';
+import RequireAuth from './Pages/Shared/RequireAuth/RequireAuth';
+import DashBoard from './Pages/Shared/DashBoard/DashBoard';
 
 function App() {
   return (
@@ -16,7 +18,12 @@ function App() {
       <Routes>
         <Route path='/' element={ <Home/> }></Route>
         <Route path='/home' element={ <Home/> }></Route>
-        <Route path='/purchase/:id' element={ <Purchase/> }></Route>
+        <Route path='/purchase/:id' element={ <RequireAuth>
+          <Purchase/>
+        </RequireAuth> }></Route>
+        <Route path='/dashBoard' element={ <RequireAuth>
+          <DashBoard/>
+        </RequireAuth> }></Route>
         <Route path='/login' element={ <Login/> }></Route>
         <Route path='/signUp' element={ <SignUp/> }></Route>
         <Route path='*' element={ <NotFound/> }></Route>

@@ -1,14 +1,22 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, NavLink } from 'react-router-dom';
+import auth from '../../../firebase.init';
 
 const Nav = () => {
+  const [user, loading, error] = useAuthState(auth);
+  
+  const logout = () => {
+    signOut(auth);
+  };
 
     const menuItems = <>
     <li><Link className='font-bold' to='/home'>Home</Link></li>
-    <li><Link className='font-bold' to='/about'>Blogs</Link></li>
-    <li><Link className='font-bold' to='/appointment'>Dashboard</Link></li>
-    <li><Link className='font-bold' to='/reviews'>Portfolio</Link></li>
-    <li><Link className='font-bold' to='/login'>Login</Link></li>
+    <li><Link className='font-bold' to='/blogs'>Blogs</Link></li>
+    {user && <li><Link className='font-bold' to='/dashBoard'>Dashboard</Link></li>}
+    <li><Link className='font-bold' to='/portfolio'>Portfolio</Link></li>
+    {user ? <li><Link onClick={logout} className='font-bold' to='/login'>Log Out</Link></li> : <li><Link className='font-bold' to='/login'>Login</Link></li>}
     </>
     return (
         <div className='sticky top-0 z-50'>
