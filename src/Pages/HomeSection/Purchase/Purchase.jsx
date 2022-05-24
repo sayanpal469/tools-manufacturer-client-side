@@ -7,7 +7,7 @@ const Purchase = () => {
     const {data: products, isLoading, refetch} = useQuery('doctors', () => fetch().then(res=> res.json()))
     return (
         <div>
-            
+            {id}
         </div>
     );
 };

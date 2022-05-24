@@ -1,6 +1,5 @@
 [
     {
-      "id": "1",
       "name": "Advance Tool",
       "price": "$3,812.79",
       "picture": "https://i.ibb.co/qxPS8MP/advance-tool.jpg",
@@ -9,7 +8,6 @@
       "description": "A power tool is a tool that is actuated by an additional power source and mechanism other than the solely manual labor used with hand tools. "
     },
     {
-      "id": "2",
       "name": "Chain Shaw",
       "price": "$1,894.36",
       "picture": "https://i.ibb.co/zxbdX9m/chain-saw.jpg",
@@ -18,7 +16,6 @@
       "description": "A chainsaw is a power tool that can quickly cut through tree trunks and branches."
     },
     {
-      "id": "3",
       "name": "Electrik Drill",
       "price": "$2,707.57",
       "picture": "https://i.ibb.co/FmnLFx9/electric-drill.jpg",
@@ -27,7 +24,6 @@
       "description": "A power drill is a tool with an electrical motor that rotates a replaceable drill bit at your choice of speeds to create a hole in a variety of materials."
     },
     {
-      "id": "4",
       "name": "Electrick Wires",
       "price": "$3,513.74",
       "picture": "https://i.ibb.co/921mvck/electric-wires.jpg",
@@ -36,7 +32,6 @@
       "description": "An electrical wire is a type of conductor, which is a material that conducts electricity."
     },
     {
-      "id": "5",
       "name": "Grinder",
       "price": "$2,223.33",
       "picture": "https://i.ibb.co/YRHcSv0/grinder.jpg",
@@ -45,7 +40,6 @@
       "description": "A grinding machine, often shortened to grinder, is one of power tools or machine tools used for grinding."
     },
     {
-      "id": "6",
       "name": "Hammer",
       "price": "$3,666.19",
       "picture": "https://i.ibb.co/Wsy56rb/hammer.jpg",
@@ -54,16 +48,14 @@
       "description": "A hammer is a tool, most often a hand tool, consisting of a weighted 'head' fixed to a long handle that is swung to deliver an impact to a small area of an object."
     },
     {
-      "id": "7",
       "name": "Safety Helmet",
       "price": "$3,666.19",
       "picture": "https://i.ibb.co/7SgCjcZ/helmet.jpg",
       "availableQuantity": "100",
       "minQuantity": "50",
-      "description": "Safety helmets or Hard Hats are designed to protect the head against falling objects and the side of the head, eyes, and neck from any untoward impacts, bumps, scrapes, and electrical exposure, etc."
+      "description": "Safety helmets or Hard Hats are designed to protect the head against falling objects and of the head, eyes, and neck from any untoward impacts, bumps, scrapes, and electrical exposure, etc."
     },
     {
-      "id": "8",
       "name": "Power Saw",
       "price": "$3,666.19",
       "picture": "https://i.ibb.co/9VnsYRZ/power-saw.jpg",

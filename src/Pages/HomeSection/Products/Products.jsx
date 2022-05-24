@@ -4,7 +4,7 @@ import Loading from '../../Shared/Loading/Loading';
 import Product from '../Produts/Product';
 
 const Products = () => {
-    const {data: products, isLoading, refetch} = useQuery('doctors', () => fetch('products.json').then(res=> res.json()))
+    const {data: products, isLoading, refetch} = useQuery('doctors', () => fetch('http://localhost:5000/tools').then(res=> res.json()))
 
     if(isLoading) {
         return <Loading/>
@@ -15,7 +15,7 @@ const Products = () => {
             <div className='grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-6 px-12 mt-10'>
                 {
                     products.map(product => <Product
-                        key={product?.id}
+                        key={product?._id}
                         product={product} 
                     ></Product>)
                 }
