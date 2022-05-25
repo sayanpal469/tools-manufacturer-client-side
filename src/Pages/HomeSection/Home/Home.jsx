@@ -5,16 +5,18 @@ import TopBanner from '../TopBanner/TopBanner';
 import Products from '../Products/Products';
 import ThirdBanner from '../ThirdBanner/ThirdBanner';
 import FourthBanner from '../FourthBanner/FourthBanner';
+import Footer from '../Footer/Footer';
 
 
 const Home = () => {
     return (
-        <div className='mb-80 home'>
+        <div className='home'>
             <TopBanner/>
             <SecondBanner/>
             <Products/>
             <ThirdBanner/>
             <FourthBanner/>
+            <Footer/>
         </div>
     );
 };
