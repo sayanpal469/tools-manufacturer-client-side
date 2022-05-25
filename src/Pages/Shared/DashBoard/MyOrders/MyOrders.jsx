@@ -1,16 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import useOrders from '../../../Hooks/useOrders';
 import MyOrderRaw from './MyOrderRaw';
 
 const MyOrders = () => {
-    const [orders, setOrders] = useState([])
+    const [orders] = useOrders()
 
-    useEffect( () => {
-        fetch(`http://localhost:5000/orders`)
-        .then(res => res.json())
-        .then(data => {
-            setOrders(data)
-        })
-    },[])
     return (
         <div>
             <div class="overflow-x-auto mt-5">
@@ -19,6 +13,7 @@ const MyOrders = () => {
       <tr>
         <th></th>
         <th>Product</th>
+        <th>Name</th>
         <th>Price</th>
         <th>Quantity</th>
         <th>Payment</th>

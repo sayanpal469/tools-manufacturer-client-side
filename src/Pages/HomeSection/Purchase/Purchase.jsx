@@ -13,27 +13,21 @@ const Purchase = () => {
     if (isLoading) {
         return <Loading />
     }
-    //console.log(user);
+
     const { email, displayName } = user
     const { picture, name, minQuantity, availableQuantity, price, _id } = product;
 
     const getPrice = (e) => {
         const orderQuantity = e.target.value;
-        console.log(orderQuantity);
+        //console.log(orderQuantity);
         const newPrice = parseInt(orderQuantity) * price;
         setTotalPrice(newPrice)
-        console.log(newPrice);
     }
-
-    const handelDisabled = (e) => {
-        const orderQuantity = e.target.value
-
-    }
-
 
     const handelSubmit = (e) => {
         e.preventDefault()
         const productName = product.name;
+        const productImg = product.picture
         const userName = user.displayName;
         const email = user.email;
         const availableQuantity = product.availableQuantity;
@@ -42,7 +36,8 @@ const Purchase = () => {
         const totalPrice = e.target.totalPrice.value; 
         const orderQuantity = e.target.orderQuantity.value;
         const address = e.target.address.value;
-        const orderInfo = { productName, userName, email, availableQuantity, minQuantity, price, totalPrice, orderQuantity, address }
+        const phoneNumber = e.target.phone.value;
+        const orderInfo = { productName, productImg, userName, email, availableQuantity, minQuantity, price, totalPrice, orderQuantity, address, phoneNumber }
         //console.log(orderInfo);
 
         if(orderQuantity > minQuantity) {
@@ -55,8 +50,10 @@ const Purchase = () => {
             })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
                 alert('Order Placed')
+                // orderQuantity.value('');
+                // address.value('');
+                // e.target.phone.value('');
             })
         } else {
             alert("You can't order below minimum quantity")
@@ -64,7 +61,7 @@ const Purchase = () => {
 
     }
     return (
-        <div className='grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 items-center px-20 gap-10'>
+        <div className='grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 items-center px-20 gap-10 my-10'>
             <div className='w-[100%] mx-auto'>
                 <img className='' src={picture} alt="" />
             </div>
@@ -117,8 +114,11 @@ const Purchase = () => {
                         </div>
                     </div>
 
+                    <label for="phone" class="block mb-2 font-bold text-gray-600">Phone Number</label>
+                    <input type="tel" required placeholder='Enter your phone number' name="phone" class="border border-gray-300 shadow p-3 w-full mb-5  rounded " />
+
                     <label for="name" class="block mb-2 font-bold text-gray-600">Address</label>
-                    <input type="text" placeholder='Enter Your Delivery Address' name="address" class="border border-gray-300 shadow p-3 w-full mb-5  rounded " />
+                    <input type="text" required placeholder='Enter Your Delivery Address' name="address" class="border border-gray-300 shadow p-3 w-full mb-5  rounded " />
 
                     <input type='submit' value='Book Now' class="w-full btn btn-warning text-white" />
                 </form>
