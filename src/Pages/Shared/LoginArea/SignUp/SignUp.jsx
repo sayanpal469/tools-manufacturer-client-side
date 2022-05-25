@@ -3,14 +3,16 @@ import signUp from '../../../../assets/Login/signUp.jpg'
 import { FcGoogle } from 'react-icons/fc';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../../firebase.init';
-import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
+import { useAuthState, useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import Loading from '../../Loading/Loading';
+import useToken from '../../../Hooks/useToken';
 
 
 const SignUp = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const { register, formState: { errors }, handleSubmit } = useForm();
+    const [User] = useAuthState(auth)
     const [
         createUserWithEmailAndPassword,
         user,
@@ -22,6 +24,8 @@ const SignUp = () => {
       const location = useLocation()
       const from = location.state?.from?.pathname || '/' ;
       let signInError;
+
+      const [token] = useToken(User || user || gUser)
 
       if(loading || gLoading) {
           return <Loading/>

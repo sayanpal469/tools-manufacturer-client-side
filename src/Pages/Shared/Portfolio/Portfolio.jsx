@@ -163,7 +163,7 @@ const Portfolio = () => {
                                     <a target='_blank' href='https://github.com/sayanpal469/doctors-portal-server-side-'>Server Side</a>
                                 </div>
                                 <div class="badge badge-outline">
-                                    <a target='_blank' href='https://doctors-portal-8801a.web.app/'>Live Side Side</a>
+                                    <a target='_blank' href='https://doctors-portal-8801a.web.app/'>Live Side</a>
                                 </div>
                             </div>
                         </div>

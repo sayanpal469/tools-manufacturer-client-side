@@ -2,13 +2,15 @@ import React, { useRef } from 'react';
 import login from '../../../../assets/Login/login.jpg'
 import { FcGoogle } from 'react-icons/fc';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useAuthState, useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../../firebase.init';
 import Loading from '../../Loading/Loading';
+import useToken from '../../../Hooks/useToken';
 
 
 const Login = () => {
     const emailRef = useRef('')
+    const [User] = useAuthState(auth)
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const [
         signInWithEmailAndPassword,
@@ -24,6 +26,8 @@ const Login = () => {
 
     let loginError;
     let from = location.state?.from?.pathname || "/";
+
+    const [token] = useToken(User || user || gUser)
 
     if(gLoading || loading) {
         return <Loading/>

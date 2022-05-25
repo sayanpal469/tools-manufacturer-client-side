@@ -4,7 +4,7 @@ import Review from './Review';
 
 const CustomerReview = () => {
     const [reviews] = useReview()
-    console.log(reviews);
+    //console.log(reviews);
     
     return (
         <div className='my-20 px-12'>

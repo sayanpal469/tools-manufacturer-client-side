@@ -13,6 +13,8 @@ import MyProfile from './Pages/Shared/DashBoard/MyProfile/MyProfile';
 import MyOrders from './Pages/Shared/DashBoard/MyOrders/MyOrders';
 import AddReview from './Pages/Shared/DashBoard/AddReview/AddReview';
 import Portfolio from './Pages/Shared/Portfolio/Portfolio';
+import RequireAdmin from './Pages/Shared/RequireAdmin/RequireAdmin';
+import MakeAdmin from './Pages/Shared/DashBoard/MakeAdmin/MakeAdmin';
 
 function App() {
   return (
@@ -29,6 +31,9 @@ function App() {
           <Route index element={ <MyProfile/> }></Route>
           <Route path='myOrders' element={ <MyOrders/> }></Route>
           <Route path='addReview' element={ <AddReview/> }></Route>
+          <Route path='makeAdmin' element={ <RequireAdmin>
+            <MakeAdmin/>
+          </RequireAdmin> }></Route>
         </Route>
         <Route path='/portfolio' element={ <Portfolio/> }></Route>
         <Route path='/login' element={ <Login/> }></Route>
