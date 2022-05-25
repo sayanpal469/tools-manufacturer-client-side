@@ -17,7 +17,7 @@ const DashBoard = () => {
                         <FaUserAlt className='text-2xl'></FaUserAlt>    
                     </Link></li>
                     <li><Link className='my-5' to='/dashBoard/myOrders'>My Orders</Link></li>
-                    <li><Link className='' to='#'>Add a Review</Link></li>
+                    <li><Link className='' to='/dashboard/addReview'>Add a Review</Link></li>
                     <li><Link className='my-5' to='#'>Manage All Orders</Link></li>
                     <li><Link className='' to='#'>Add a Product</Link></li>
                     <li><Link className='my-5' to='#'>Make Admin</Link></li>

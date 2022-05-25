@@ -8,7 +8,7 @@ const MyProfile = () => {
     const [user, loading, error] = useAuthState(auth);
     const { displayName, email, photoURL } = user;
     const [orders] = useOrders()
-    console.log(orders);
+    //console.log(orders);
 
     if (loading) {
         return <Loading />

@@ -6,6 +6,7 @@ import Products from '../Products/Products';
 import ThirdBanner from '../ThirdBanner/ThirdBanner';
 import BusinessReview from '../BusinessReview/BusinessReview';
 import Footer from '../Footer/Footer';
+import CustomerReview from '../CustomerReview/CustomerReview';
 
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
             <Products/>
             <ThirdBanner/>
             <BusinessReview/>
+            <CustomerReview/>
             <Footer/>
         </div>
     );
