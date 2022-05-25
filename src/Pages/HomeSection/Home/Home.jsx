@@ -4,7 +4,7 @@ import SecondBanner from '../SecondBanner/SecondBanner';
 import TopBanner from '../TopBanner/TopBanner';
 import Products from '../Products/Products';
 import ThirdBanner from '../ThirdBanner/ThirdBanner';
-import FourthBanner from '../FourthBanner/FourthBanner';
+import BusinessReview from '../BusinessReview/BusinessReview';
 import Footer from '../Footer/Footer';
 
 
@@ -15,7 +15,7 @@ const Home = () => {
             <SecondBanner/>
             <Products/>
             <ThirdBanner/>
-            <FourthBanner/>
+            <BusinessReview/>
             <Footer/>
         </div>
     );
