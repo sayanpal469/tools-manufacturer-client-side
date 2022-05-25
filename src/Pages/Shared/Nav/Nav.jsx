@@ -30,7 +30,7 @@ const Nav = () => {
                           {menuItems}
                     </ul>
                   </div>
-                  <Link to='/' className="btn btn-ghost font-bold text-5xl normal-case"><span className=' text-orange-400 uppercase'>Jan</span>trick</Link>
+                  <Link to='/' className="btn btn-ghost font-bold  lg:text-5xl normal-case"><span className=' text-orange-400 uppercase'>Jan</span>trick</Link>
                 </div>
 
                 <div className="navbar-center hidden lg:flex">

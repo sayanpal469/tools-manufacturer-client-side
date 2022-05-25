@@ -10,6 +10,7 @@ import Login from './Pages/Shared/LoginArea/Login/Login';
 import RequireAuth from './Pages/Shared/RequireAuth/RequireAuth';
 import DashBoard from './Pages/Shared/DashBoard/DashBoard';
 import MyProfile from './Pages/Shared/DashBoard/MyProfile/MyProfile';
+import MyOrders from './Pages/Shared/DashBoard/MyOrders/MyOrders';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         </RequireAuth> }></Route>
         <Route path='/dashBoard' element={ <RequireAuth><DashBoard/></RequireAuth> }>
           <Route path='myProfile' element={ <MyProfile/> }></Route>
+          <Route path='myOrders' element={ <MyOrders/> }></Route>
         </Route>
         <Route path='/login' element={ <Login/> }></Route>
         <Route path='/signUp' element={ <SignUp/> }></Route>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useQuery } from 'react-query';
 import { Link, useParams } from 'react-router-dom';
@@ -7,6 +7,7 @@ import Loading from '../../Shared/Loading/Loading';
 
 const Purchase = () => {
     const [user] = useAuthState(auth)
+    const [totalPrice, setTotalPrice] = useState(0)
     const { id } = useParams()
     const { data: product, isLoading, refetch } = useQuery('produt', () => fetch(`http://localhost:5000/tools/${id}`).then(res => res.json()))
     if (isLoading) {
@@ -14,7 +15,21 @@ const Purchase = () => {
     }
     //console.log(user);
     const { email, displayName } = user
-    const { picture, name, minQuantity, availableQuantity, price, _id } = product
+    const { picture, name, minQuantity, availableQuantity, price, _id } = product;
+
+    const getPrice = (e) => {
+        const orderQuantity = e.target.value;
+        console.log(orderQuantity);
+        const newPrice = parseInt(orderQuantity) * price;
+        setTotalPrice(newPrice)
+        console.log(newPrice);
+    }
+
+    const handelDisabled = (e) => {
+        const orderQuantity = e.target.value
+
+    }
+
 
     const handelSubmit = (e) => {
         e.preventDefault()
@@ -24,9 +39,10 @@ const Purchase = () => {
         const availableQuantity = product.availableQuantity;
         const minQuantity = product.minQuantity;
         const price = product.price;
+        const totalPrice = e.target.totalPrice.value; 
         const orderQuantity = e.target.orderQuantity.value;
         const address = e.target.address.value;
-        const orderInfo = { productName, userName, email, availableQuantity, minQuantity, price, orderQuantity, address }
+        const orderInfo = { productName, userName, email, availableQuantity, minQuantity, price, totalPrice, orderQuantity, address }
         //console.log(orderInfo);
 
         if(orderQuantity > minQuantity) {
@@ -92,12 +108,12 @@ const Purchase = () => {
                     <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-5">
                         <div class="mb-5">
                             <label for="name" class="block mb-2 font-bold text-gray-600">Order your quantity</label>
-                            <input name='orderQuantity' type="number" placeholder='Please Give Your Order Quantity' class="border border-gray-300 shadow p-3 w-full  rounded " />
+                            <input onChange={getPrice} name='orderQuantity' type="number" placeholder='Please Give Your Order Quantity' class="border border-gray-300 shadow p-3 w-full  rounded " />
                         </div>
 
                         <div class="mb-5">
                             <label for="twitter" class="block mb-2 font-bold text-gray-600">Total Price</label>
-                            <input type="text" disabled value={price} name="totalPrice" class="border  shadow p-3 w-full rounded " />
+                            <input type="text" disabled value={totalPrice} name="totalPrice" class="border  shadow p-3 w-full rounded " />
                         </div>
                     </div>
 
