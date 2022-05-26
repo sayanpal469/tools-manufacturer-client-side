@@ -66,8 +66,9 @@ const Portfolio = () => {
             {/* Skills area */}
             <div className='my-28 bg-black text-white py-10'>
                 <h1 className='text-5xl text-center'>My skills for Web Development</h1>
-                <div className='text-xl text-orange-500 mt-10  font-semibold text-center'>EXPERTISE</div>
-                <div className='grid  lg:grid-cols-8 md:grid-cols-4 sm:grid-cols-2 mt-10 px-28 justify-center items-center gap-5'>
+
+              <div className='text-xl text-orange-500 mt-10  font-semibold text-center'>EXPERTISE</div>
+                <div className='grid mx-auto w-full lg:grid-cols-8 md:grid-cols-4 sm:grid-cols-2 mt-10 px-28  gap-5'>
                     <img className='w-14' src={html} alt="" />
                     <img className='w-14' src={css} alt="" />
                     <img className='w-14' src={bootstrap} alt="" />
@@ -97,6 +98,7 @@ const Portfolio = () => {
                     <img className='w-14' src={npm} alt="" />
                     <img className='w-14' src={figma} alt="" />
                 </div>
+              
             </div>
 
             {/* Project */}

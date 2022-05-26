@@ -52,9 +52,11 @@ function App() {
             <Route path='manageOrders' element={ <RequireAdmin>
             <ManageOrders/>
             </RequireAdmin> }></Route>
+
+            <Route path='payment/:id' element={ <Payment/> }></Route>
           </Route>
 
-        <Route path='/payment' element={ <Payment/> }></Route>
+        
         <Route path='/portfolio' element={ <Portfolio/> }></Route>
         <Route path='/login' element={ <Login/> }></Route>
         <Route path='/signUp' element={ <SignUp/> }></Route>

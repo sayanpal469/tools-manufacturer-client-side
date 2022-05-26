@@ -2,13 +2,8 @@ import React from 'react';
 
 const ManageOrders = () => {
     return (
-        <div>
-            <h1>Manage orders</h1>
-            <h1>Manage orders</h1>
-            <h1>Manage orders</h1>
-            <h1>Manage orders</h1>
-            <h1>Manage orders</h1>
-            <h1>Manage orders</h1>
+        <div className='flex justify-center items-center h-screen'>
+            <h1 className='text-5xl'>Manage orders coming soon.....</h1>
         </div>
     );
 };
