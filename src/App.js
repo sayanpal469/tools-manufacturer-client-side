@@ -15,6 +15,10 @@ import AddReview from './Pages/Shared/DashBoard/AddReview/AddReview';
 import Portfolio from './Pages/Shared/Portfolio/Portfolio';
 import RequireAdmin from './Pages/Shared/RequireAdmin/RequireAdmin';
 import MakeAdmin from './Pages/Shared/DashBoard/MakeAdmin/MakeAdmin';
+import Payment from './Pages/Shared/Payment/Payment';
+import ManageProduct from './Pages/Shared/DashBoard/ManageProduct/ManageProduct';
+import AddProduct from './Pages/Shared/DashBoard/AddProduct/AddProduct';
+import ManageOrders from './Pages/Shared/DashBoard/ManageOrders/ManageOrders';
 
 function App() {
   return (
@@ -27,6 +31,7 @@ function App() {
         <Route path='/purchase/:id' element={ <RequireAuth>
           <Purchase/>
         </RequireAuth> }></Route>
+
         <Route path='/dashBoard' element={ <RequireAuth><DashBoard/></RequireAuth> }>
           <Route index element={ <MyProfile/> }></Route>
           <Route path='myOrders' element={ <MyOrders/> }></Route>
@@ -34,7 +39,22 @@ function App() {
           <Route path='makeAdmin' element={ <RequireAdmin>
             <MakeAdmin/>
           </RequireAdmin> }></Route>
-        </Route>
+
+          <Route path='addProduct' element={ <RequireAdmin>
+            <AddProduct/>
+          </RequireAdmin> }></Route>
+
+          <Route path='manageProduct' element={ <RequireAdmin>
+            <ManageProduct/>
+            </RequireAdmin> }>
+            </Route>
+
+            <Route path='manageOrders' element={ <RequireAdmin>
+            <ManageOrders/>
+            </RequireAdmin> }></Route>
+          </Route>
+
+        <Route path='/payment' element={ <Payment/> }></Route>
         <Route path='/portfolio' element={ <Portfolio/> }></Route>
         <Route path='/login' element={ <Login/> }></Route>
         <Route path='/signUp' element={ <SignUp/> }></Route>

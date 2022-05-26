@@ -7,6 +7,7 @@ import ThirdBanner from '../ThirdBanner/ThirdBanner';
 import BusinessReview from '../BusinessReview/BusinessReview';
 import Footer from '../Footer/Footer';
 import CustomerReview from '../CustomerReview/CustomerReview';
+import FifthBanner from '../FifthBanner/FifthBanner';
 
 
 const Home = () => {
@@ -18,6 +19,7 @@ const Home = () => {
             <ThirdBanner/>
             <BusinessReview/>
             <CustomerReview/>
+            <FifthBanner/>
             <Footer/>
         </div>
     );

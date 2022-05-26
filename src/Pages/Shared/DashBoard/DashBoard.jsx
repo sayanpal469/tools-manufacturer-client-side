@@ -1,7 +1,7 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { FaUserAlt } from 'react-icons/fa';
-import { Link,  Outlet } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import useAdmin from '../../Hooks/useAdmin';
 
@@ -12,7 +12,7 @@ const DashBoard = () => {
         <div class="drawer drawer-mobile bg-slate-100 pt-1">
             <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
             <div class="drawer-content flex flex-col px-12">
-                <label for="my-drawer-2" class="btn btn-primary drawer-button lg:hidden">Open drawer</label>
+                <label for="my-drawer-2" class="btn btn-primary  drawer-button lg:hidden">Open drawer</label>
                 <Outlet></Outlet>
             </div>
             <div class="drawer-side shadow-xl rounded-2xl">
@@ -26,10 +26,10 @@ const DashBoard = () => {
 
                     {
                         admin && <>
-                            <li><Link className='my-3' to='/dashboard/makeAdmin'>Make Admin</Link></li>
-                            <li><Link className='' to='/dashboard/manageAllOrders'>Manage All Orders</Link></li>
+                            <li><Link className='mt-3' to='/dashboard/makeAdmin'>Make Admin</Link></li>
                             <li><Link className='my-3' to='/dashboard/addProduct'>Add a Product</Link></li>
-                            <li><Link className='' to='/dashboard/manegeProduct'>Manage Product</Link></li>
+                            <li><Link className='' to='/dashboard/manageProduct'>Manage Product</Link></li>
+                            <li><Link className='my-3' to='/dashboard/manageOrders'>Manage All Orders</Link></li>
                         </>
                     }
                 </ul>

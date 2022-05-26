@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const MyOrderRaw = ({ order, index }) => {
     const { productName, productImg, totalPrice, orderQuantity, _id } = order
@@ -27,7 +28,7 @@ const MyOrderRaw = ({ order, index }) => {
             <td>${totalPrice}</td>
             <td>{orderQuantity}</td>
             <td>
-                <button className='btn btn-success text-white'>Pay</button>
+                <Link to='/payment' className='btn btn-success text-white'>Pay</Link>
             </td>
             <td>
                 <button onClick={() => handelDelete(_id)} className='btn btn-error text-white'>Delete</button>

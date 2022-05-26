@@ -4,6 +4,11 @@ const ManageOrders = () => {
     return (
         <div>
             <h1>Manage orders</h1>
+            <h1>Manage orders</h1>
+            <h1>Manage orders</h1>
+            <h1>Manage orders</h1>
+            <h1>Manage orders</h1>
+            <h1>Manage orders</h1>
         </div>
     );
 };
