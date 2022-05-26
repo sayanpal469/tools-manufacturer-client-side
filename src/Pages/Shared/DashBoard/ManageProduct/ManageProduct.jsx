@@ -4,7 +4,7 @@ import Loading from '../../Loading/Loading';
 import ProductsRaw from './ProductsRaw';
 
 const ManageProduct = () => {
-    const {data: products, isLoading, refetch} = useQuery('products', () => fetch('http://localhost:5000/tools', ).then(res=> res.json()))
+    const {data: products, isLoading, refetch} = useQuery('products', () => fetch('https://hidden-sea-29105.herokuapp.com/tools', ).then(res=> res.json()))
     console.log(products);
 
     if(isLoading) {

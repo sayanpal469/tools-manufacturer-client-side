@@ -5,7 +5,7 @@ const AdminRaw = ({user, index, refetch}) => {
     //console.log(user);
 
     const deleteUser = () => {
-        fetch(`http://localhost:5000/user/${email}`, {
+        fetch(`https://hidden-sea-29105.herokuapp.com/user/${email}`, {
             method: 'DELETE',
         })
         .then(res => res.json())
@@ -17,7 +17,7 @@ const AdminRaw = ({user, index, refetch}) => {
     }
 
     const makeAdmin = () => {
-        fetch(`http://localhost:5000/user/admin/${email}`, {
+        fetch(`https://hidden-sea-29105.herokuapp.com/user/admin/${email}`, {
             method: 'PUT',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

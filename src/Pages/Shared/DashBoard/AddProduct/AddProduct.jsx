@@ -14,7 +14,7 @@ const AddProduct = () => {
         const addTools = { name, price, picture, availableQuantity, minQuantity, description}
         console.log(addTools);
 
-        fetch(`http://localhost:5000/tools`, {
+        fetch(`https://hidden-sea-29105.herokuapp.com/tools`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

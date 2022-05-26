@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 const useReview = () => {
     const [reviews, setReviews] = useState([])
     useEffect( () => {
-        fetch(`http://localhost:5000/reviews`, {
+        fetch(`https://hidden-sea-29105.herokuapp.com/reviews`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
             }

@@ -15,7 +15,7 @@ const CheckOutForm = ({ order }) => {
     const { totalPrice, _id } = order
     const email = user?.email;
     useEffect(() => {
-        fetch('http://localhost:5000/create-payment-intent', {
+        fetch('https://hidden-sea-29105.herokuapp.com/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

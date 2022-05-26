@@ -5,7 +5,7 @@ const ProductsRaw = ({product, index, refetch}) => {
     const {picture, name, price, availableQuantity, _id} = product;
 
     const handelDelete = (id) => {
-        fetch(`http://localhost:5000/tools/${id}`, {
+        fetch(`https://hidden-sea-29105.herokuapp.com/tools/${id}`, {
             method: 'DELETE',
         })
         .then(res => res.json())

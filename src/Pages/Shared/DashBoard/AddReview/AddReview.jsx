@@ -11,7 +11,7 @@ const AddReview = () => {
 
         const reviewInfo = {name, rating, picture, comment}
 
-        fetch(`http://localhost:5000/reviews`, {
+        fetch(`https://hidden-sea-29105.herokuapp.com/reviews`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

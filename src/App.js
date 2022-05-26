@@ -19,6 +19,7 @@ import Payment from './Pages/Shared/Payment/Payment';
 import ManageProduct from './Pages/Shared/DashBoard/ManageProduct/ManageProduct';
 import AddProduct from './Pages/Shared/DashBoard/AddProduct/AddProduct';
 import ManageOrders from './Pages/Shared/DashBoard/ManageOrders/ManageOrders';
+import Blogs from './Pages/Shared/Blogs/Blogs';
 
 function App() {
   return (
@@ -57,6 +58,7 @@ function App() {
           </Route>
 
         
+        <Route path='/blogs' element={ <Blogs/> }></Route>
         <Route path='/portfolio' element={ <Portfolio/> }></Route>
         <Route path='/login' element={ <Login/> }></Route>
         <Route path='/signUp' element={ <SignUp/> }></Route>

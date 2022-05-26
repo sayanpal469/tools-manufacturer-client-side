@@ -9,7 +9,7 @@ const Purchase = () => {
     const [user] = useAuthState(auth)
     const [totalPrice, setTotalPrice] = useState(0)
     const { id } = useParams()
-    const { data: product, isLoading, refetch } = useQuery('produt', () => fetch(`http://localhost:5000/tools/${id}`).then(res => res.json()))
+    const { data: product, isLoading, refetch } = useQuery('produt', () => fetch(`https://hidden-sea-29105.herokuapp.com/tools/${id}`).then(res => res.json()))
     if (isLoading) {
         return <Loading />
     }
@@ -41,7 +41,7 @@ const Purchase = () => {
         //console.log(orderInfo);
 
         if(orderQuantity > minQuantity) {
-            fetch(`http://localhost:5000/orders`, {
+            fetch(`https://hidden-sea-29105.herokuapp.com/orders`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

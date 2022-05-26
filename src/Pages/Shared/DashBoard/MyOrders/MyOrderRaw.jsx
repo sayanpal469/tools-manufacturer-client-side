@@ -7,7 +7,7 @@ const MyOrderRaw = ({ order, index }) => {
     const navigate = useNavigate()
 
     const handelDelete = (id) => {
-        fetch(`http://localhost:5000/orders/${id}`, {
+        fetch(`https://hidden-sea-29105.herokuapp.com/orders/${id}`, {
             method: 'DELETE',
         })
             .then(res => res.json())
