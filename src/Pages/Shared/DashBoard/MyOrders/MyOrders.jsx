@@ -16,6 +16,7 @@ const MyOrders = () => {
               <th>Price</th>
               <th>Quantity</th>
               <th>Payment</th>
+              <th>Pending Status</th>
               <th>Delete</th>
             </tr>
           </thead>

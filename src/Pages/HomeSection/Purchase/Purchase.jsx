@@ -1,11 +1,12 @@
 import React, { useRef, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useQuery } from 'react-query';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 
 const Purchase = () => {
+    const navigate = useNavigate()
     const [user] = useAuthState(auth)
     const [totalPrice, setTotalPrice] = useState(0)
     const { id } = useParams()
@@ -16,6 +17,9 @@ const Purchase = () => {
 
     const { email, displayName } = user
     const { picture, name, minQuantity, availableQuantity, price, _id } = product;
+    console.log(minQuantity);
+
+    
 
     const getPrice = (e) => {
         const orderQuantity = e.target.value;
@@ -40,7 +44,7 @@ const Purchase = () => {
         const orderInfo = { productName, productImg, userName, email, availableQuantity, minQuantity, price, totalPrice, orderQuantity, address, phoneNumber }
         //console.log(orderInfo);
 
-        if(orderQuantity > minQuantity) {
+       
             fetch(`https://hidden-sea-29105.herokuapp.com/orders`, {
             method: 'POST',
             headers: {
@@ -52,13 +56,11 @@ const Purchase = () => {
             .then(res => res.json())
             .then(data => {
                 alert('Order Placed')
+                console.log(data);
                 // orderQuantity.value('');
                 // address.value('');
                 // e.target.phone.value('');
             })
-        } else {
-            alert("You can't order below minimum quantity")
-        }
 
     }
     return (
@@ -121,7 +123,7 @@ const Purchase = () => {
                     <label for="name" class="block mb-2 font-bold text-gray-600">Address</label>
                     <input type="text" required placeholder='Enter Your Delivery Address' name="address" class="border border-gray-300 shadow p-3 w-full mb-5  rounded " />
 
-                    <input type='submit' value='Book Now' class="w-full btn btn-warning text-white" />
+                    {<input type='submit' value='Book Now' class="w-full btn btn-warning text-white" />}
                 </form>
             </div>
         </div>

@@ -6,9 +6,13 @@ import auth from '../../../firebase.init';
 const CheckOutForm = ({ order }) => {
     const stripe = useStripe();
     const elements = useElements();
-    const [cardError, setCardError] = useState('')
-    const [success, setSuccess] = useState('')
+    const [cardError, setCardError] = useState('');
+    const [processing, setprocessing] = useState(false);
+    const [success, setSuccess] = useState('');
+    const [transactionId, setTransactionId] = useState();
     const [clientSecret, setClientSecret] = useState('');
+
+    
 
     const [user] = useAuthState(auth);
 
@@ -49,6 +53,7 @@ const CheckOutForm = ({ order }) => {
 
         if (error) {
             setCardError(error?.message)
+            setprocessing(true)
         }
         else {
             setCardError('')
@@ -69,14 +74,48 @@ const CheckOutForm = ({ order }) => {
 
         if (intentError) {
             setCardError(intentError.message)
+            setprocessing(false)
         }
         else {
             setCardError('')
-            console.log(paymentIntent)
+            setTransactionId(paymentIntent.id)
             setSuccess('Congrats! Your Payment is Completed')
-        }
 
-    }
+            const payment={
+                order:_id,
+                transactionId: paymentIntent.id,
+                status:'pending'
+              }
+
+              
+              
+              fetch(`https://hidden-sea-29105.herokuapp.com/paymentOrder/${_id}`,{
+                method: 'PATCH',
+                headers: {
+                  'content-type': 'application/json',
+                  'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+              },
+              body: JSON.stringify(payment)
+          
+              }).then(res=>res.json()).then(data=>{
+                setprocessing(false)
+                console.log(data);
+              })
+          }
+          
+              }
+
+
+
+
+
+
+
+
+
+
+
+
     return (
         <>
             <form onSubmit={handleSubmit}>
@@ -96,7 +135,7 @@ const CheckOutForm = ({ order }) => {
                         },
                     }}
                 />
-                <button type="submit" className='btn  btn-success m-5' disabled={!stripe || !clientSecret}>
+                <button  type="submit" className='btn  btn-success m-5' disabled={!stripe || !clientSecret}>
                     Pay
                 </button>
             </form>
