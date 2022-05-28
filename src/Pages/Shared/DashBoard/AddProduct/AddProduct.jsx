@@ -1,4 +1,5 @@
 import React from 'react';
+import swal from 'sweetalert';
 
 const AddProduct = () => {
 
@@ -23,8 +24,7 @@ const AddProduct = () => {
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data);
-            alert('Product added')
+            swal("Product added", "Your product is added, check in home", "success");
         })
     }
 

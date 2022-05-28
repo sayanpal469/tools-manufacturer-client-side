@@ -1,20 +1,41 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import swal from 'sweetalert';
 
 const MyOrderRaw = ({ order, index }) => {
     const { productName, productImg, totalPrice, orderQuantity, _id, status, paid } = order
     //console.log(order);
     const navigate = useNavigate()
 
+
+
+
+
+
     const handelDelete = (id) => {
-        fetch(`https://hidden-sea-29105.herokuapp.com/orders/${id}`, {
-            method: 'DELETE',
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-            })
+        swal({
+            title: "Are You Sure to Delete?",
+            text: `Item Name: ${productName}`,
+            icon: "error",
+            buttons: ["Cancel", "Delete"],
+            closeOnClickOutside: false,
+          })
+          .then((willPay) => {
+            if (willPay) {
+                swal("Item Deleted!", "Successfully Item Deleted!", "success")
+                const url= `https://hidden-sea-29105.herokuapp.com/orders/${id}`
+                fetch(url,{
+                  method:'DELETE'
+              })
+              .then(res=>res.json())
+              .then(data=>{
+                  if(data.deletedCount>0){
+                 }
+             })
+            } 
+          });
     }
+        
     return (
         <tr>
             <th>{index + 1}</th>
@@ -40,7 +61,7 @@ const MyOrderRaw = ({ order, index }) => {
                 {
                     status === "pending" || status === "shipped" ? <button class="btn btn-success text-white">{status}</button>
                     :
-                    ''
+                    'Not Paid'
                 }
             </td>
 

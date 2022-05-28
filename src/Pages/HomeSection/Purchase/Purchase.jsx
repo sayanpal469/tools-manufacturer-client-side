@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useQuery } from 'react-query';
 import { Link, useNavigate, useParams } from 'react-router-dom';
+import swal from 'sweetalert';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 
@@ -17,7 +18,7 @@ const Purchase = () => {
 
     const { email, displayName } = user
     const { picture, name, minQuantity, availableQuantity, price, _id } = product;
-    console.log(minQuantity);
+    //console.log(minQuantity);
 
     
 
@@ -55,11 +56,12 @@ const Purchase = () => {
             })
             .then(res => res.json())
             .then(data => {
-                alert('Order Placed')
-                console.log(data);
-                // orderQuantity.value('');
-                // address.value('');
-                // e.target.phone.value('');
+                swal({
+                    title: "Order Placed",
+                    text: "Your order is done, Check in My orders in Dashboard",
+                    icon: "success",
+                    button: "Ok",
+                  });
             })
 
     }
